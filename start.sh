@@ -23,6 +23,7 @@ pip install -r requirements.txt -q
 
 echo "✅ Backend dependencies installed."
 echo "🔧 Starting FastAPI server on http://localhost:8000 ..."
+cd "$ROOT"
 uvicorn backend.main:app --reload --port 8000 --host 0.0.0.0 &
 BACKEND_PID=$!
 
